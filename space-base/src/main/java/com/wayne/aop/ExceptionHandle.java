@@ -26,6 +26,6 @@ public class ExceptionHandle {
             return HttpUtil.ResponseFail(500, "服务器繁忙");
         }
         ex.printStackTrace();
-        return HttpUtil.ResponseFail(500, ex.getMessage());
+        return HttpUtil.ResponseFail(500, "服务器异常");
     }
 }

@@ -7,11 +7,7 @@ spring:
     url: jdbc:mysql://211.159.217.246:3306/wayne-space
     username: root
     password: root
-  jpa:
-    hibernate:
-      ddl-auto: update
-    show-sql: true
-    open-in-view: true
+    type: com.alibaba.druid.pool.DruidDataSource
   redis:
     database: 0
     host: 211.159.217.246
@@ -43,3 +39,7 @@ spring:
       port: 20881
       host: 211.159.217.246
     scan: com.wayne.dubbo
+
+mybatis:
+  mapper-locations: classpath:mapping/*.xml
+  type-aliases-package: com.winter.model

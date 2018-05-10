@@ -1,5 +1,7 @@
 package com.wayne.interceptor;
 
+import com.wayne.token.AuthToken;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -14,10 +16,19 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class LoginInterceptor implements HandlerInterceptor {
 
+    @Autowired
+    private AuthToken authToken;
 
     @Override
-    public boolean preHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o) throws Exception {
-        return true;
+    public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object o) throws Exception {
+        //执行拦截逻辑
+        String token = request.getHeader("token");
+        String requestURI = request.getRequestURI();
+        if (requestURI.contains("login")) {
+            return true;
+        }
+
+        return false;
     }
 
     @Override
