@@ -4,7 +4,7 @@ server:
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://211.159.217.246:3306/wayne-space
+    url: jdbc:mysql://211.159.217.246:3306/test
     username: root
     password: root
     type: com.alibaba.druid.pool.DruidDataSource

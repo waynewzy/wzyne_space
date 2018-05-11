@@ -2,14 +2,7 @@ package com.wayne.model;
 
 import java.io.Serializable;
 
-/**
- * @author wayne
- * @date 2018/5/10 0010
- * <p>
- * description:
- */
-public class User implements Serializable {
-
+public class User implements Serializable{
     private Integer userId;
 
     private String userName;

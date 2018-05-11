@@ -23,12 +23,12 @@ public class LoginInterceptor implements HandlerInterceptor {
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object o) throws Exception {
         //执行拦截逻辑
         String token = request.getHeader("token");
-        String requestURI = request.getRequestURI();
-        if (requestURI.contains("login")) {
-            return true;
-        }
+        String requestURL = request.getRequestURI();
+//        if (requestURI.contains("login") || requestURI.contains("test")) {
+//            return true;
+//        }
 
-        return false;
+        return true;
     }
 
     @Override
