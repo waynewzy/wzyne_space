@@ -12,7 +12,7 @@ import org.springframework.context.annotation.ComponentScan;
  * desc:
  */
 
-@MapperScan("com.wayne")
+@MapperScan("com.wayne.dao")
 @SpringBootApplication
 public class SpaceAdminApplication {
 

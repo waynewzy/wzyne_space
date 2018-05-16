@@ -11,6 +11,7 @@
         <module>space-base</module>
         <module>space-dubbo-api</module>
         <module>space-admin</module>
+        <module>space-user</module>
     </modules>
 
 </project>

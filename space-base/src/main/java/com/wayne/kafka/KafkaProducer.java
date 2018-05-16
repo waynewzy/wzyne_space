@@ -31,7 +31,7 @@ public class KafkaProducer  {
         ListenableFuture<SendResult<String, String>> future = kafkaTemplate.send(topic, message);
 
         // you can register a callback with the listener to receive the result
-        // of the send asynchronously
+        // success回调
         future.addCallback(new ListenableFutureCallback<SendResult<String, String>>() {
 
             @Override
@@ -49,7 +49,7 @@ public class KafkaProducer  {
 
             @Override
             public void onFailure(Throwable ex) {
-                logger.error("unable to send kafka message='{}'", message, ex);
+                logger.debug("unable to send kafka message='{}'", message, ex);
             }
         });
     }

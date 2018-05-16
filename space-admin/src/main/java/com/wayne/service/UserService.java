@@ -10,5 +10,5 @@ import com.wayne.model.User;
  */
 public interface UserService {
 
-    public void insert(User user);
+    Integer insert(User user);
 }

@@ -9,12 +9,14 @@
         <module name="space-admin" />
         <module name="space-base" />
         <module name="space-dubbo-api" />
+        <module name="space-user" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="space-admin" target="1.8" />
       <module name="space-base" target="1.8" />
       <module name="space-dubbo-api" target="1.5" />
+      <module name="space-user" target="1.8" />
       <module name="wzyne_space" target="1.5" />
     </bytecodeTargetLevel>
   </component>

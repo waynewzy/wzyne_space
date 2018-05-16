@@ -23,13 +23,13 @@ spring:
   kafka:
     bootstrap-servers: 211.159.217.246:9092
     consumer:
-      group-id: admin-consumer-group
+      group-id: user-consumer-group
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
 
   dubbo:
     application:
-      name: admin-provider
+      name: user-provider
     registry:
       protocol: zookeeper
       address: 211.159.217.246:2181
