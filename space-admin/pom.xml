@@ -55,7 +55,7 @@
                 <artifactId>mybatis-generator-maven-plugin</artifactId>
                 <version>1.3.2</version>
                 <configuration>
-                    <configurationFile>../space-admin/src/main/resources/generator/generatorConfig.xml</configurationFile>
+                    <configurationFile>../space-base/src/main/resources/generator/generatorConfig.xml</configurationFile>
                     <overwrite>true</overwrite>
                     <verbose>true</verbose>
                 </configuration>

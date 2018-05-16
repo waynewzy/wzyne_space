@@ -8,7 +8,7 @@ import com.wayne.kafka.KafkaMessageType;
 import com.wayne.kafka.KafkaProducer;
 import com.wayne.kafka.KafkaTopicConstant;
 import com.wayne.model.User;
-import com.wayne.service.UserService;
+import com.wayne.dubbo.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -31,16 +31,9 @@ public class TestController {
     @GetMapping(value = "/kafka")
     public Response kafkaTest() {
         KafkaMessage kafkaMessage = new KafkaMessage(KafkaMessageType.KAFKA_MESSAGE_TEST, "kafka测试");
-        kafkaProducer.sendMessage(KafkaTopicConstant.ADMIN_KAFKA_TOPIC, new Gson().toJson(kafkaMessage));
+        kafkaProducer.sendMessage(KafkaTopicConstant.USER_KAFKA_TOPIC, new Gson().toJson(kafkaMessage));
         return HttpUtil.ResponseSuccess();
     }
 
-    @PostMapping("/addUser")
-    public Response addUser() {
-        User user = new User();
-        user.setPassword("8888");
-        user.setPhone("188");
-        userService.insert(user);
-        return HttpUtil.ResponseSuccess(user);
-    }
+
 }

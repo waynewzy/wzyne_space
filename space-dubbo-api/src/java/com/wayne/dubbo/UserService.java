@@ -1,4 +1,4 @@
-package com.wayne.service;
+package com.wayne.dubbo;
 
 import com.wayne.model.User;
 

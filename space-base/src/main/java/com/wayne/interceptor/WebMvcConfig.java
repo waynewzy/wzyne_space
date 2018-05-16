@@ -22,17 +22,24 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter {
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(getLoginInterceptor()).addPathPatterns("/**");
+        registry.addInterceptor(getLoginInterceptor()).addPathPatterns("/**").excludePathPatterns("/login","/toLogin","/index");
+        super.addInterceptors(registry);
     }
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-
+        registry.addResourceHandler("/**").addResourceLocations("classpath:/");
+        super.addResourceHandlers(registry);
     }
 
     @Override
     public void addCorsMappings(CorsRegistry registry) {
 
+    }
 
+    @Override
+    public void addViewControllers(ViewControllerRegistry registry) {
+        registry.addViewController("/index").setViewName("index");
+        super.addViewControllers(registry);
     }
 }

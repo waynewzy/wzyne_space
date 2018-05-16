@@ -1,8 +1,11 @@
 package com.wayne.dao;
 
 import com.wayne.model.User;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface UserMapper {
+
     int deleteByPrimaryKey(Integer id);
 
     int insert(User record);

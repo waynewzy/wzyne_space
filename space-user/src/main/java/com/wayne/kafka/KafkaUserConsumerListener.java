@@ -5,15 +5,15 @@ import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Component;
 
 /**
- * @author Wayne
- * @date 2018/3/9
+ * @author wayne
+ * @date 2018/5/16 17:16
  * <p>
- * desc: kafka消费者监听
+ * description: kafka消费者监听
  */
 @Component
-public class KafkaAdminConsumerListener {
+public class KafkaUserConsumerListener {
 
-    @KafkaListener(topics = KafkaTopicConstant.USER_KAFKA_TOPIC)
+    @KafkaListener(topics = KafkaTopicConstant.ADMIN_KAFKA_TOPIC)
     public void processMessage(String message) {
         KafkaMessage kafkaMessage = new Gson().fromJson(message, KafkaMessage.class);
         System.out.println(kafkaMessage.getTag());

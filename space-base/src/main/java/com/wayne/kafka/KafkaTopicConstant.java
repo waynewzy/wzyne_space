@@ -9,4 +9,6 @@ package com.wayne.kafka;
 public class KafkaTopicConstant {
 
     public static final String ADMIN_KAFKA_TOPIC = "admin.kafka.topic";
+
+    public static final String USER_KAFKA_TOPIC = "user.kafka.topic";
 }

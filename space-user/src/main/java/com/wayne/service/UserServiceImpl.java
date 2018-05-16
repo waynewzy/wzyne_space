@@ -1,8 +1,8 @@
-package com.wayne.service.Impl;
+package com.wayne.service;
 
 import com.wayne.dao.UserMapper;
 import com.wayne.model.User;
-import com.wayne.service.UserService;
+import com.wayne.dubbo.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
