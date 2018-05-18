@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/space-admin/space-admin.iml" filepath="$PROJECT_DIR$/space-admin/space-admin.iml" />
       <module fileurl="file://$PROJECT_DIR$/space-base/space-base.iml" filepath="$PROJECT_DIR$/space-base/space-base.iml" />
-      <module fileurl="file://$PROJECT_DIR$/space-dubbo-api/space-dubbo-api.iml" filepath="$PROJECT_DIR$/space-dubbo-api/space-dubbo-api.iml" />
-      <module fileurl="file://$PROJECT_DIR$/space-user/space-user.iml" filepath="$PROJECT_DIR$/space-user/space-user.iml" />
+      <module fileurl="file://$PROJECT_DIR$/space-dao/space-dao.iml" filepath="$PROJECT_DIR$/space-dao/space-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/space-service/space-service.iml" filepath="$PROJECT_DIR$/space-service/space-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/space-web/space-web.iml" filepath="$PROJECT_DIR$/space-web/space-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/wzyne_space.iml" filepath="$PROJECT_DIR$/.idea/wzyne_space.iml" />
     </modules>
   </component>

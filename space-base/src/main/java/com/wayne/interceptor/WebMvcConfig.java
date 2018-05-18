@@ -11,7 +11,6 @@ import org.springframework.web.servlet.config.annotation.*;
  * desc:
  */
 @Configuration
-@EnableWebMvc
 public class WebMvcConfig extends WebMvcConfigurerAdapter {
 
     @Bean
@@ -28,7 +27,6 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter {
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        registry.addResourceHandler("/**").addResourceLocations("classpath:/");
         super.addResourceHandlers(registry);
     }
 
@@ -39,7 +37,9 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter {
 
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
-        registry.addViewController("/index").setViewName("index");
+        registry.addViewController("/index");
+        registry.addViewController("/user");
+//        registry.addRedirectViewController("/","/templates/login.html");
         super.addViewControllers(registry);
     }
 }
