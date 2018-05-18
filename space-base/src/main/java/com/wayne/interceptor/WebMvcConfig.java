@@ -39,7 +39,7 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter {
     public void addViewControllers(ViewControllerRegistry registry) {
         registry.addViewController("/index");
         registry.addViewController("/user");
-//        registry.addRedirectViewController("/","/templates/login.html");
+        registry.addRedirectViewController("/login","/templates/login.html");
         super.addViewControllers(registry);
     }
 }

@@ -23,7 +23,7 @@ import java.util.Date;
  */
 @Controller
 @RequestMapping
-public class TestController {
+public class IndexController {
 
     @Autowired
     private KafkaProducer kafkaProducer;
@@ -39,7 +39,7 @@ public class TestController {
     }
 
     @GetMapping(value = "/login")
-    public String toLogin() {
-        return "/demo";
+    public String login() {
+        return "/login";
     }
 }
