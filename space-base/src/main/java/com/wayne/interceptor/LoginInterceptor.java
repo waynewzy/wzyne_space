@@ -1,5 +1,6 @@
 package com.wayne.interceptor;
 
+import com.wayne.model.User;
 import com.wayne.token.AuthToken;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.servlet.HandlerInterceptor;
@@ -22,13 +23,19 @@ public class LoginInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object o) throws Exception {
         //执行拦截逻辑
-        String token = request.getHeader("token");
-        String requestURL = request.getRequestURI();
-//        if (requestURI.contains("login") || requestURI.contains("test")) {
-//            return true;
-//        }
-
-        return true;
+        User user = (User) request.getSession().getAttribute("loginUser");
+        if (user != null) {
+            if (authToken.validate(user)) {
+                return true;
+            } else {
+                request.getSession().removeAttribute("loginUser");
+                response.sendRedirect("/login");
+                return false;
+            }
+        }else{
+            response.sendRedirect("/login");
+            return true;
+        }
     }
 
     @Override

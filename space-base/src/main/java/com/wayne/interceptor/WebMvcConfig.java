@@ -21,7 +21,7 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter {
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(getLoginInterceptor()).addPathPatterns("/**").excludePathPatterns("/login","/toLogin","/index");
+        registry.addInterceptor(getLoginInterceptor()).addPathPatterns("/**").excludePathPatterns("/login","/index","/user/toLogin");
         super.addInterceptors(registry);
     }
 
@@ -37,9 +37,6 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter {
 
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
-        registry.addViewController("/index");
-        registry.addViewController("/user");
-        registry.addRedirectViewController("/login","/templates/login.html");
         super.addViewControllers(registry);
     }
 }

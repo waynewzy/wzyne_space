@@ -41,10 +41,16 @@ spring:
     scan: com.wayne.dubbo
   mvc:
     static-path-pattern: /**
-    view:
-      suffix: .html
   resources:
     static-locations: classpath:/templates/,classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/
+
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    mode: HTML5
+    encoding: UTF-8
+    content-type: text/html
+#    cache: false
 mybatis:
   mapper-locations: classpath:com.wayne.dao/*.xml
   type-aliases-package: com.wayne.model

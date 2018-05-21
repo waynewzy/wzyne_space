@@ -11,4 +11,8 @@ import com.wayne.model.User;
 public interface UserService {
 
     int insert(User user);
+
+    User findByPhoneAndPassword(User user);
+
+    int update(User user);
 }
